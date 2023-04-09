@@ -1,0 +1,199 @@
+.attend-page {
+  background-color: darkorange;
+  min-height: 100vh;
+}
+
+.attend-header {
+  background-color: #875500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-style: italic;
+  padding: 30px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.data-search {
+  height: 48px;
+  font-size: 24px;
+  margin-bottom: 32px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  width: 100%;
+  max-width: 450px;
+}
+
+.data-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+.data-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #b85300;
+  color: black;
+  padding: 20px 20px;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+.data-siswa-header {
+  height: 10vh;
+  width: 100%;
+  margin-top: 5px;
+  font-weight: 800;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid goldenrod;
+  padding: 35px;
+  background-color: whitesmoke;
+}
+
+.data-siswa-body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: #d28201;
+}
+
+.data-siswa-foto {
+  width: 35%;
+  /* height: auto; */
+  height: 350px;
+}
+
+.data-siswa-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.data-siswa-text {
+  background-color: rgb(124, 92, 54);
+  font-size: 1.25em;
+  font-weight: bold;
+  align-self: flex-start;
+  width: 100%;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 70%;
+  padding: 15px;
+  text-align: center;
+  flex-direction: column;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+  /* margin-top: 20px; */
+  /* padding-top: 40px; */
+}
+
+.data-siswa-text p {
+  margin: 0;
+  padding: 0;
+}
+
+.data-siswa-text p:nth-of-type(1) {
+  font-size: 1.5em;
+  color: whitesmoke;
+}
+
+.data-siswa-footer-container {
+  background-color: gold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.data-siswa-waktu {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.data-siswa-kehadiran {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.data-siswa-waktu,
+.data-siswa-kehadiran {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .data-wrapper {
+    width: 40%;
+  }
+}
+
+.data-view-button-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+}
+
+.data-view-button-container button {
+  float: right;
+  padding: 10px 25px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  /* background-color: rgb(40, 40, 40); */
+  background-color: rgb(172, 172, 172);
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 7px 40px 5px #80290088;
+  transition: box-shadow 0.3s;
+}
+
+.data-view-button-container button:hover {
+  background-color: rgb(216, 216, 216);
+  /* background-color: rgb(60, 60, 60); */
+  box-shadow: none;
+  color: black;
+}
+
+
+/* NITIIPPPP */
+/* .data-siswa-text {
+  background-color: rgb(124, 92, 54);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  align-self: flex-start;
+  width: 100%;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+} */
