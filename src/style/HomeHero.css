@@ -1,0 +1,27 @@
+.hero {
+  height: 100vh;
+  /* background-image: url(../assets/images/hero-unhas.jpeg); */
+  /* filter: brightness(50%); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../assets/images/hero-unhas.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 60px;
+  padding-top: 20vh;
+}
+
+.hero-text {
+  height: 300px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-shadow: 3px 3px black;
+  letter-spacing: 4px;
+  color: white;
+}
