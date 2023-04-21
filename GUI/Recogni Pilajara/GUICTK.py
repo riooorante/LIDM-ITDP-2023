@@ -7,7 +7,7 @@ window.title("Recogni Pilajara")
 window.rowconfigure(0, weight=1)
 
 frameKiri = ctk.CTkFrame(window, corner_radius=0, width=300)
-frameKiri.grid(row=0, column=2, rowspan=4, sticky="nsew")
+frameKiri.grid(row=0, column=1, rowspan=4, sticky="nsew")
 frameKiri.grid_rowconfigure(10, weight=1)
 
 mainLabel = ctk.CTkLabel(frameKiri, text="RecogniPilajara", font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
@@ -27,14 +27,14 @@ switch_1 = ctk.CTkSwitch(frameKiri, text='Mode', variable=switchVari, onvalue=Tr
 switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 
 video = tk.Canvas(window, bg='black', height=480, width=640)
-video.grid(row=0, column=5, padx=65, pady=(20, 0))
+video.grid(row=0, column=2, padx=25, pady=(20, 0))
 
 frameKanan = ctk.CTkFrame(window, corner_radius=0, width=600)
-frameKanan.grid(row=0, column=7, rowspan=4, sticky="nsew")
+frameKanan.grid(row=0, column=3, rowspan=4, sticky="nsew")
 frameKanan.grid_rowconfigure(15, weight=1)
 
 foto = tk.Canvas(frameKanan, bg='black', height=200, width=200)
-foto.grid(row=0, column=1, padx=135, pady=(30, 0))
+foto.grid(row=0, column=1, padx=0, pady=(30, 0)) # padx ->135
 
 nama = ctk.CTkLabel(frameKanan, text="Mario".capitalize(), font=ctk.CTkFont(family='Davish', size=30, weight='bold'))
 nama.grid(row=1, column=1, padx=120, pady=(90, 0))
