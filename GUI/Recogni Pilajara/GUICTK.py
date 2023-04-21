@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import tkinter as tk
+from Scanner import WebcamCapture
 
 window = ctk.CTk()
 window.geometry("1500x820")
@@ -28,6 +29,12 @@ switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 
 video = tk.Canvas(window, bg='black', height=480, width=640)
 video.grid(row=0, column=2, padx=25, pady=(20, 0))
+
+camlabel = tk.Label(window)
+camlabel.grid(row=0, column=2, padx=25, pady=(20, 0))
+
+webcam = WebcamCapture(camlabel)
+webcam.start()
 
 frameKanan = ctk.CTkFrame(window, corner_radius=0, width=600)
 frameKanan.grid(row=0, column=3, rowspan=4, sticky="nsew")
