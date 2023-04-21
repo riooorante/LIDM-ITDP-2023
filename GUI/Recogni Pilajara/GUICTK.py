@@ -1,5 +1,7 @@
 import customtkinter as ctk
 import tkinter as tk
+from Scanner import WebcamCapture
+import threading
 
 window = ctk.CTk()
 window.geometry("1500x820")
@@ -29,6 +31,13 @@ switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 video = tk.Canvas(window, bg='black', height=480, width=640)
 video.grid(row=0, column=2, padx=25, pady=(20, 0))
 
+camlabel = tk.Label(window)
+camlabel.grid(row=0, column=2, padx=25, pady=(20, 0))
+
+webcam = WebcamCapture(camlabel)
+webcam.start()
+print("WEBCAM START")
+
 frameKanan = ctk.CTkFrame(window, corner_radius=0, width=600)
 frameKanan.grid(row=0, column=3, rowspan=4, sticky="nsew")
 frameKanan.grid_rowconfigure(15, weight=1)
@@ -45,5 +54,15 @@ labelHadir.grid(row=3, column=1, padx=12, pady=(130, 0))
 labelHadir1 = ctk.CTkLabel(frameKanan, text="KEHADIRAN", font=ctk.CTkFont(family='Davish', size=30, weight='bold'))
 labelHadir1.grid(row=4, column=1, padx=120, pady=(120, 0))
 
+def on_closing():
+    # Stop and release webcam capture before closing window
+    webcam.stop()
+    webcam.release()
+    print("WEBCAM END")
+    window.quit()
+
+t = threading.Thread(target=on_closing)
+
+window.protocol("WM_DELETE_WINDOW", lambda: t.start())
 
 window.mainloop()
