@@ -31,20 +31,5 @@ class WebcamCapture:
                 self.label.config(image=imgtk)
                 self.label.image = imgtk
 
-def main():
-    # Create customtkinter window
-    root = tk.CustomTkinter()
-    root.title("Webcam Display")
-
-    # Create label to display webcam feed
-    label = tk.Label(root)
-    label.pack()
-
-    # Create webcam capture object
-    webcam = WebcamCapture(label)
-    webcam.start()
-
-    root.mainloop()
-
-if __name__ == "__main__":
-    main()
+    def release(self):
+        self.cap.release()
