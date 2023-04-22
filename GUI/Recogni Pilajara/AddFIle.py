@@ -1,10 +1,13 @@
 import customtkinter as ctk
-import tkinter as tk
 
-window = ctk.CTk()
-window.geometry("1500x820")
-window.title("Recogni Pilajara")
-window.rowconfigure(0, weight=1)
+class AddFile():
+
+    def __init__(self):
+        self.window = ctk.CTk()
+    def mainpage1(self):
+        window.geometry("1500x820")
+        window.title("Recogni Pilajara")
+        window.rowconfigure(0, weight=1)
 
 frameKiri = ctk.CTkFrame(window, corner_radius=0, width=300)
 frameKiri.grid(row=0, column=1, rowspan=4, sticky="nsew")
@@ -51,8 +54,7 @@ nimLabel.grid(row=3, column=1, columnspan=2,  padx=20, pady=10, sticky="w")
 nimEntry = ctk.CTkEntry(form, placeholder_text="NIM", width=400)
 nimEntry.grid(row=4, column=1, columnspan=2, padx=20, pady=10, sticky="w")
 
-genderVar = tk.StringVar(value="Prefer\not to say")
-
+genderVar = ctk.StringVar(value="Prefer\not to say")
 genderLabel = ctk.CTkLabel(form, text="Jenis Kelamin")
 genderLabel.grid(row=5, column=1, padx=20, pady=10, sticky="w")
 
