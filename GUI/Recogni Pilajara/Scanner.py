@@ -6,7 +6,7 @@ import threading
 class WebcamCapture:
     def __init__(self, label):
         self.label = label
-        self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture(1)
         self.thread = None
         self.is_running = False
 

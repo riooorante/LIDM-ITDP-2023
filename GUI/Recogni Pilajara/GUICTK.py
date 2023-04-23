@@ -28,7 +28,7 @@ switchVari = ctk.BooleanVar(value=True)
 switch_1 = ctk.CTkSwitch(Lframe_PgMain, text='Mode', variable=switchVari, onvalue=True, offvalue=False)
 switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 
-camlabel = ctk.CTkLabel(window)
+camlabel = tk.Label(window)
 camlabel.grid(row=0, column=2, padx=25, pady=(20, 0))
 
 webcam = WebcamCapture(camlabel)
