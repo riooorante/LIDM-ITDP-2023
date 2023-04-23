@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63b6f074-e06f-4081-b1f6-9c660e6d0ee5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Recogni Pilajara/defAddData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/GUICTK.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/GUICTK.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/AddFIle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/AddFIle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recogni Pilajara/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/Scanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +41,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\Project\LIDM-ITDP-2023\Recogni Pilajara" />
       <recent name="D:\Programming\Project\LIDM-ITDP-2023\GUI\Recogni Pilajara" />
     </key>
   </component>

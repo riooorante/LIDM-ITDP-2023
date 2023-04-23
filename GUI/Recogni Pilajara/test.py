@@ -75,8 +75,7 @@ class App(ctk.CTk):
         self.mainButton.grid(row=7, column=1, padx=55, pady=(30, 10))
 
         self.switchVari = ctk.BooleanVar(value=True)
-        self.switch_1 = ctk.CTkSwitch(self.leftFrame_pgform, text='Mode', variable=self.switchVari, onvalue=True,
-                                      offvalue=False)
+        self.switch_1 = ctk.CTkSwitch(self.leftFrame_pgform, text='Mode', variable=self.switchVari, onvalue=True, offvalue=False)
         self.switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 
         self.buttonpict = ctk.CTkButton(self.second_frame, height=300, width=300, corner_radius=20)
@@ -111,37 +110,24 @@ class App(ctk.CTk):
         self.maleRadioButton = ctk.CTkRadioButton(self.form, text="Laki-Laki", variable=self.genderVar, value="He is")
         self.maleRadioButton.grid(row=5, column=2, padx=20, pady=10, sticky="w")
 
-        self.femaleRadioButton = ctk.CTkRadioButton(self.form, text="Perempuan", variable=self.genderVar,
-                                                    value="She is")
+        self.femaleRadioButton = ctk.CTkRadioButton(self.form, text="Perempuan", variable=self.genderVar,value="She is")
         self.femaleRadioButton.grid(row=5, column=3, padx=20, pady=10, sticky="w")
 
         self.occupationLabel = ctk.CTkLabel(self.form, text="Program Studi")
         self.occupationLabel.grid(row=6, column=1, padx=20, pady=10, sticky="w")
 
-        self.occupationOptionMenu = ctk.CTkOptionMenu(self.form,
-                                                      values=["Sistem Informasi", "Matematika", "Fisika", "Kimia",
-                                                              "Biologi"])
+        self.occupationOptionMenu = ctk.CTkOptionMenu(self.form,values=["Sistem Informasi", "Matematika", "Fisika", "Kimia","Biologi"])
         self.occupationOptionMenu.grid(row=6, column=2, padx=20, pady=10, columnspan=2, sticky="w")
-
-        self.rowconfigure(0, weight=1)
-        self.columnconfigure(0, weight=1)
-        self.mainpage.rowconfigure(0, weight=1)
-        self.mainpage.columnconfigure(0, weight=1)
-        self.mainpage.columnconfigure(1, weight=1)
-        self.second_frame.rowconfigure(0, weight=1)
-        self.second_frame.columnconfigure(0, weight=1)
 
 
         self.mainpage()
 
     def mainPage(self):
         self.second_frame.grid_forget()
-
         self.mainpage.grid(row=0, columns=0, sticky='nsew')
 
     def addPage(self):
         self.mainpage.grid_forget()
-
         self.second_frame.grid(row=0, columns=0, sticky='nsew')
 
 if __name__ == '__main__':

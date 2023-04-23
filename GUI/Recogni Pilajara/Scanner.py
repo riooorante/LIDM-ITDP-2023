@@ -28,7 +28,7 @@ class WebcamCapture:
                 rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 image = Image.fromarray(rgb_frame)
                 imgtk = ImageTk.PhotoImage(image)
-                self.label.config(image=imgtk)
+                self.label.configure(image=imgtk)
                 self.label.image = imgtk
 
     def release(self):
