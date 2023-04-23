@@ -1,8 +1,9 @@
 import customtkinter as ctk
 import tkinter as tk
 
-class App():
+class App(ctk.CTk):
     def __init__(self):
+        super().__init__()
         self.window = ctk.CTk()
 
     def mainWindow(self):
@@ -57,7 +58,6 @@ class App():
 
         self.mainButton = ctk.CTkButton(master=self.Rframe_pgmain, text='KEHADIRAN', font=ctk.CTkFont(family='Davish', size=30, weight='bold'),hover=False)
         self.mainButton.grid(row=10, column=0, padx=125, pady=1, sticky='w')
-
 
 
 app = App()
