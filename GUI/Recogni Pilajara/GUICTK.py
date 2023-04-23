@@ -70,7 +70,6 @@
 import customtkinter as ctk
 import tkinter as tk
 from Scanner import WebcamCapture
-import threading
 
 class RecogniPilajaraApp:
     def __init__(self):
@@ -132,12 +131,9 @@ class RecogniPilajaraApp:
         self.button3.grid(row=5, column=0, padx=20, pady=(10, 20), sticky='w')
 
     def on_window_close(self):
-        # Fungsi untuk menangani event penutupan jendela
-        # Tambahkan kode Anda di sini untuk menangani event penutupan jendela
-        # Misalnya, simpan data, tampilkan konfirmasi, atau lakukan operasi bersih
         self.webcam.stop()
         self.webcam.release()
-        self.window.destroy()  # Contoh: Hancurkan jendela aplikasi
+        self.window.destroy()
 
 
         # Add event listeners
@@ -178,4 +174,5 @@ class RecogniPilajaraApp:
         #     pass
 
 app = RecogniPilajaraApp()
+
 app.window.mainloop()
