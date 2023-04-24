@@ -9,12 +9,12 @@ class App(ctk.CTk):
         self.geometry("1500x820")
         self.title("Recogni Pilajara")
 
+        self.mainPage = ctk.CTkFrame(self)
+        self.second_frame = ctk.CTkFrame(self)
 
         # Main Page
-        self.mainpage = ctk.CTkFrame(self)
-        self.mainpage.grid(row=0, column=0, sticky="nsew")
 
-        self.Lframe_pgmain = ctk.CTkFrame(self.mainpage, corner_radius=0, width=300)
+        self.Lframe_pgmain = ctk.CTkFrame(self.mainPage, corner_radius=0, width=300)
         self.Lframe_pgmain.grid(row=0, column=1, rowspan=4, sticky="nsew")
         self.Lframe_pgmain.grid_rowconfigure(10, weight=1)
 
@@ -34,10 +34,10 @@ class App(ctk.CTk):
         self.switch_1 = ctk.CTkSwitch(self.Lframe_pgmain, text='Mode', variable=self.switchVari, onvalue=True,offvalue=False)
         self.switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 
-        self.video = ctk.CTkButton(self.mainpage, width=640, height=480)
+        self.video = ctk.CTkButton(self.mainPage, width=640, height=480)
         self.video.grid(row=0, column=2, rowspan=4, sticky="w", padx=85)
 
-        self.Rframe_pgmain = ctk.CTkFrame(self.mainpage, corner_radius=0, width=500)
+        self.Rframe_pgmain = ctk.CTkFrame(self.mainPage, corner_radius=0, width=500)
         self.Rframe_pgmain.grid(row=0, column=4, rowspan=4, sticky="nsew")
         self.Rframe_pgmain.grid_rowconfigure(10, weight=1)
 
@@ -55,8 +55,6 @@ class App(ctk.CTk):
         self.mainButton.grid(row=10, column=0, padx=125, pady=1, sticky='w')
 
         # second Frame
-        self.second_frame = ctk.CTkFrame(self)
-        self.second_frame.grid(row=0, column=0, sticky="nsew")
 
         self.leftFrame_pgform = ctk.CTkFrame(self.second_frame, corner_radius=0, width=300)
         self.leftFrame_pgform.grid(row=0, column=1, rowspan=4, sticky="nsew")
@@ -65,7 +63,7 @@ class App(ctk.CTk):
         self.Maintext = ctk.CTkLabel(self.leftFrame_pgform, text="RecogniPilajara",font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
         self.Maintext.grid(row=1, column=1, padx=55, pady=(30, 10))
 
-        self.button1 = ctk.CTkButton(self.leftFrame_pgform, text="Main Page", command=self.mainPage())
+        self.button1 = ctk.CTkButton(self.leftFrame_pgform, text="Main Page", command=self.main())
         self.button1.grid(row=5, column=1, padx=55, pady=(30, 10))
 
         self.button2 = ctk.CTkButton(self.leftFrame_pgform, text="Add Data", )
@@ -119,18 +117,24 @@ class App(ctk.CTk):
         self.occupationOptionMenu = ctk.CTkOptionMenu(self.form,values=["Sistem Informasi", "Matematika", "Fisika", "Kimia","Biologi"])
         self.occupationOptionMenu.grid(row=6, column=2, padx=20, pady=10, columnspan=2, sticky="w")
 
+        self.rowconfigure(0, weight=1)
+        self.columnconfigure(0, weight=1)
+        self.mainPage.rowconfigure(0, weight=1)
+        self.mainPage.columnconfigure(0, weight=1)
+        self.mainPage.columnconfigure(1, weight=1)
+        self.second_frame.rowconfigure(0, weight=1)
+        self.second_frame.columnconfigure(0, weight=1)
 
-        self.mainpage()
+        self.main()
 
-    def mainPage(self):
+    def main(self):
         self.second_frame.grid_forget()
-        self.mainpage.grid(row=0, columns=0, sticky='nsew')
+        self.mainPage.grid(row=0, columns=1, sticky='nsew')
 
     def addPage(self):
-        self.mainpage.grid_forget()
-        self.second_frame.grid(row=0, columns=0, sticky='nsew')
+        self.mainPage.grid_forget()
+        self.second_frame.grid(row=0, columns=1, sticky='nsew')
 
-if __name__ == '__main__':
-    app = App()
-    app.mainloop()
+app = App()
+app.mainloop()
 

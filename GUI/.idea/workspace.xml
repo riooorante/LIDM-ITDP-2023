@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63b6f074-e06f-4081-b1f6-9c660e6d0ee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Recogni Pilajara/defAddData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recogni Pilajara/AddFIle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/AddFIle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/Scanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/GUICTK.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/GUICTK.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recogni Pilajara/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2OS0Vzd1bQCtoMBiNMtI1HRPnbR" />
   <component name="ProjectViewState">
