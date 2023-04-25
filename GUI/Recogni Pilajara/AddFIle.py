@@ -23,8 +23,9 @@ class AddFile(ctk.CTk):
                                      font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
         self.Maintext.grid(row=1, column=1, padx=55, pady=(30, 10))
 
-        self.button1 = ctk.CTkButton(self.leftFrame_pgform, text="Main Page", command=self.show_Mainpage())
+        self.button1 = ctk.CTkButton(self.leftFrame_pgform, text="Main Page")
         self.button1.grid(row=5, column=1, padx=55, pady=(30, 10))
+        self.button1.bind('<Button-1>', self.show_Mainpage())
 
         self.button2 = ctk.CTkButton(self.leftFrame_pgform, text="Add Data", )
         self.button2.grid(row=6, column=1, padx=55, pady=(30, 10))

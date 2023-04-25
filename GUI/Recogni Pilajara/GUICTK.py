@@ -79,7 +79,7 @@ class RecogniPilajaraApp:
         self.window.rowconfigure(0, weight=1)
 
         self.addButton = ctk.CTkButton(self.window, text="Add Data")
-        self.addButton.grid(row=5, column=1, padx=55, pady=(30, 10))
+        self.addButton.grid(row=0, column=1, ipadx=10)
 
         self.Lframe_PgMain = ctk.CTkFrame(self.window, corner_radius=0, width=300)
         self.Lframe_PgMain.grid(row=0, column=1, rowspan=4, sticky="nsew")
@@ -88,7 +88,7 @@ class RecogniPilajaraApp:
         self.mainLabel = ctk.CTkLabel(self.Lframe_PgMain, text="RecogniPilajara", font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
         self.mainLabel.grid(row=1, column=1, padx=55, pady=(30, 10))
 
-        self.scanButton = ctk.CTkButton(self.Lframe_PgMain, text="Scan", )
+        self.scanButton = ctk.CTkButton(self.Lframe_PgMain, text="Scan")
         self.scanButton.grid(row=6, column=1, padx=55, pady=(30, 10))
 
         self.mainButton = ctk.CTkButton(self.Lframe_PgMain, text="Main Page", )
