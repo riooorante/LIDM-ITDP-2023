@@ -1,5 +1,4 @@
 import cv2
-import customtkinter as tk
 from PIL import Image, ImageTk
 import threading
 
