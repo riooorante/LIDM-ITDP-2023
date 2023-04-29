@@ -8,9 +8,8 @@ window.geometry(Const.window_geo)
 window.title("Recogni Pilajara")
 
 home = Home(window)
-home.getFrame()
+adddata = AddData(window)
 
-# adddata = AddData(window)
-# adddata.getFrame()
+
 
 window.mainloop()
