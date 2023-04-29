@@ -30,7 +30,7 @@ class Home:
         self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="Home", height=30)
         self.addButton.grid(row=2, column=1, pady=(30, 10))
 
-        self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="Add Data", height=30)
+        self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="Add Data", height=30, command=self.des)
         self.addButton.grid(row=3, column=1, pady=(30, 10))
 
         self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="SCAN", height=30, width=60, command=self.update_video)
@@ -93,6 +93,9 @@ class Home:
 
         # Menghilangkan label tempat tampilan video
         self.video_frame.destroy()
+
+    def des(self):
+        self.frame.grid_forget()
 
     def getFrame(self):
         return (

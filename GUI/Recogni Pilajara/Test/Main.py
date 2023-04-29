@@ -10,7 +10,7 @@ window.title("Recogni Pilajara")
 home = Home(window)
 home.getFrame()
 
-adddata = AddData(window)
-adddata.getFrame()
+# adddata = AddData(window)
+# adddata.getFrame()
 
 window.mainloop()

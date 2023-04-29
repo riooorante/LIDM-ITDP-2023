@@ -24,7 +24,7 @@ class AddData:
         self.mainLabel = ctk.CTkLabel(self.Lframe_PgMain, text="RecogniPilajara", font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
         self.mainLabel.grid(row=1, column=1, padx=55, pady=(30, 10))
 
-        self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="Home", height=30)
+        self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="Home", height=30, command=self.des)
         self.addButton.grid(row=2, column=1, pady=(30, 10))
 
         self.addButton = ctk.CTkButton(self.Lframe_PgMain, text="Add Data", height=30)
@@ -132,6 +132,11 @@ class AddData:
 
         # Menghilangkan label tempat tampilan video
         self.video_frame.destroy()
+
+    def des(self):
+        self.frame.grid_forget()
+
+
 
     def getFrame(self):
         return (
