@@ -16,6 +16,7 @@ class WebcamCapture:
 
     def stop(self):
         self.is_running = False
+        self.thread.join()
 
     def _update(self):
         while self.is_running:

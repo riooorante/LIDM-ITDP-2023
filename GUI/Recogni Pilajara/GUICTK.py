@@ -70,6 +70,8 @@
 import customtkinter as ctk
 import tkinter as tk
 from Scanner import WebcamCapture
+import threading
+
 
 class RecogniPilajaraApp:
     def __init__(self):
@@ -85,7 +87,8 @@ class RecogniPilajaraApp:
         self.Lframe_PgMain.grid(row=0, column=1, rowspan=4, sticky="nsew")
         self.Lframe_PgMain.grid_rowconfigure(10, weight=1)
 
-        self.mainLabel = ctk.CTkLabel(self.Lframe_PgMain, text="RecogniPilajara", font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
+        self.mainLabel = ctk.CTkLabel(self.Lframe_PgMain, text="RecogniPilajara",
+                                      font=ctk.CTkFont(family='Davish', size=20, weight='bold'))
         self.mainLabel.grid(row=1, column=1, padx=55, pady=(30, 10))
 
         self.scanButton = ctk.CTkButton(self.Lframe_PgMain, text="Scan")
@@ -95,7 +98,8 @@ class RecogniPilajaraApp:
         self.mainButton.grid(row=8, column=1, padx=55, pady=(30, 10))
 
         self.switchVari = ctk.BooleanVar(value=True)
-        self.switch_1 = ctk.CTkSwitch(self.Lframe_PgMain, text='Mode', variable=self.switchVari, onvalue=True, offvalue=False)
+        self.switch_1 = ctk.CTkSwitch(self.Lframe_PgMain, text='Mode', variable=self.switchVari, onvalue=True,
+                                      offvalue=False)
         self.switch_1.grid(row=13, column=1, padx=55, pady=(30, 10))
 
         self.camlabel = tk.Label(self.window)
@@ -105,21 +109,24 @@ class RecogniPilajaraApp:
         self.webcam.start()
         print("WEBCAM START")
 
-        self.window.protocol("WM_DELETE_WINDOW", self.on_window_close)
+        self.thread = threading.Thread(target=self.on_window_close)
+        self.window.protocol("WM_DELETE_WINDOW", self.thread.start)
 
         self.Rframe_pgmain = ctk.CTkFrame(self.window, corner_radius=0, width=600)
         self.Rframe_pgmain.grid(row=0, column=4, rowspan=4, sticky="nsew")
         self.Rframe_pgmain.grid_rowconfigure(10, weight=1)
 
-        self.foto = tk.Canvas(self.Rframe_pgmain, height=200,width=200)
+        self.foto = tk.Canvas(self.Rframe_pgmain, height=200, width=200)
         self.foto.grid(row=0, column=0, padx=120, pady=20, sticky='w')
         self.foto.grid_propagate(0)
 
-        self.nama = ctk.CTkLabel(master=self.Rframe_pgmain, text="MARIO",font=ctk.CTkFont(family='Davish', size=70, weight='bold'))
+        self.nama = ctk.CTkLabel(master=self.Rframe_pgmain, text="MARIO",
+                                 font=ctk.CTkFont(family='Davish', size=70, weight='bold'))
         self.nama.grid(row=1, column=0, padx=106, pady=10, sticky='w')
 
-        self.sum_label = ctk.CTkLabel(master=self.Rframe_pgmain, text='16',font=ctk.CTkFont(family='Davish', size=200, weight='bold'))
-        self.sum_label.grid(row=2, column=0, padx=100, pady=(10,12), sticky="w")
+        self.sum_label = ctk.CTkLabel(master=self.Rframe_pgmain, text='16',
+                                      font=ctk.CTkFont(family='Davish', size=200, weight='bold'))
+        self.sum_label.grid(row=2, column=0, padx=100, pady=(10, 12), sticky="w")
 
         self.button1 = ctk.CTkButton(master=self.Rframe_pgmain, text="Button 1")
         self.button1.grid(row=3, column=0, padx=20, pady=(10, 20), sticky='w')
@@ -134,7 +141,6 @@ class RecogniPilajaraApp:
         self.webcam.stop()
         self.webcam.release()
         self.window.destroy()
-
 
         # Add event listeners
         # self.addButton.bind("<Button-1>", self.add_data)
@@ -172,6 +178,7 @@ class RecogniPilajaraApp:
         # def on_button3_click(self, event):
         #     # Functionality for Button 3
         #     pass
+
 
 app = RecogniPilajaraApp()
 
