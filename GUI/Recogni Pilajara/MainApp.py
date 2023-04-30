@@ -1,13 +1,13 @@
 import customtkinter as ctk
 import tkinter as tk
-import firebase_admin
-import os
-import shutil
+# import firebase_admin
+# import os
+# import shutil
 import cv2
 from PIL import Image, ImageTk
 from customtkinter import filedialog
-from firebase_admin import credentials
-from firebase_admin import db
+# from firebase_admin import credentials
+# from firebase_admin import db
 
 class App(ctk.CTk):
 
@@ -51,19 +51,19 @@ class App(ctk.CTk):
         self.video.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
         # Video Capture
-        self.mainLabel = ctk.CTkLabel(self.Lframe_pgmain, text=None, height=443)
-        self.mainLabel.grid(row=5, column=1)
+        # self.mainLabel = ctk.CTkLabel(self.Lframe_pgmain, text=None, height=443)
+        # self.mainLabel.grid(row=5, column=1)
 
         self.video_frame = ctk.CTkFrame(self.container_mainPage, width=640, height=480)
-        self.video.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
+        self.video_frame.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
-        self.video_capture = cv2.VideoCapture(3)
+        self.video_capture = cv2.VideoCapture(0)
 
-        self.video_place = ctk.CTkLabel(self.video_frame, width=640, height=1, text=None)
-        self.video.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
+        # self.video_place = ctk.CTkLabel(self.video_frame, width=640, height=1, text=None)
+        # self.video.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
         self.video_label = ctk.CTkLabel(self.video_frame, text=None)
-        self.video.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
+        self.video_label.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
         # Rframe RFrame_PgMain
         self.Rframe_pgmain = ctk.CTkFrame(self.container_mainPage, corner_radius=0, width=500)
@@ -230,11 +230,12 @@ class App(ctk.CTk):
             photo = ImageTk.PhotoImage(image)
 
             if not self.video_label.winfo_exists():
-                self.video_frame = ctk.CTkFrame(self.Cframe_PgMain, width=640, height=480)
-                self.video_frame.pack()
+                self.video_frame = ctk.CTkFrame(self.container_mainPage, width=640, height=480)
+                self.video_frame.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
                 self.video_label = ctk.CTkLabel(self.video_frame, text=None)
-                self.video_label.pack()
+                # self.video_label.pack()
+                self.video_label.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
             # Mengubah isi dari label dengan objek PhotoImage terbaru
             self.video_label.configure(image=photo)
