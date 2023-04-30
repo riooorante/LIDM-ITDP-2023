@@ -63,7 +63,7 @@ class App(ctk.CTk):
         # self.video.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
 
         self.video_label = ctk.CTkLabel(self.video_frame, text=None)
-        self.video_label.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
+        self.video_label.grid(row=0, column=1, rowspan=4, sticky="w", padx=0)
 
         # Rframe RFrame_PgMain
         self.Rframe_pgmain = ctk.CTkFrame(self.container_mainPage, corner_radius=0, width=500)
@@ -235,7 +235,7 @@ class App(ctk.CTk):
 
                 self.video_label = ctk.CTkLabel(self.video_frame, text=None)
                 # self.video_label.pack()
-                self.video_label.grid(row=0, column=1, rowspan=4, sticky="w", padx=85)
+                self.video_label.grid(row=0, column=1, rowspan=4, sticky="w", padx=0)
 
             # Mengubah isi dari label dengan objek PhotoImage terbaru
             self.video_label.configure(image=photo)
