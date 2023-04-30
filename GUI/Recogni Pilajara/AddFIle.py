@@ -9,10 +9,23 @@ class AddFile(ctk.CTk):
         self.geometry("1500x820")
         self.title("Recogni Pilajara")
 
+        self.indicator = 1
+
         self.container_mainpage = ctk.CTkFrame(self, corner_radius=0)
         self.container_formpage = ctk.CTkFrame(self, corner_radius=0)
 
-        self.show_Mainpage()
+        self.switchPage = ctk.CTkButton(self,text='Ganti',command=self.switchPage_com)
+        self.switchPage.grid(row=1,columns=1)
+
+        self.show_MainPage()
+
+    def switchPage_com(self):
+        if self.indicator == 1:
+            self.show_FormPage()
+            self.indicator = 2
+        else:
+            self.show_MainPage()
+            self.indicator = 1
 
     def LFrame_Formpage(self):
         self.leftFrame_pgform = ctk.CTkFrame(self.container_formpage, corner_radius=0, width=300)
@@ -25,7 +38,7 @@ class AddFile(ctk.CTk):
 
         self.button1 = ctk.CTkButton(self.leftFrame_pgform, text="Main Page")
         self.button1.grid(row=5, column=1, padx=55, pady=(30, 10))
-        self.button1.bind('<Button-1>', self.show_Mainpage())
+        self.button1.bind('<Button-1>')
 
         self.button2 = ctk.CTkButton(self.leftFrame_pgform, text="Add Data", )
         self.button2.grid(row=6, column=1, padx=55, pady=(30, 10))
@@ -101,7 +114,7 @@ class AddFile(ctk.CTk):
         self.Addbutton = ctk.CTkButton(self.Lframe_pgmain, text="Main Page")
         self.Addbutton.grid(row=5, column=1, padx=55, pady=(30, 10))
 
-        self.scanButton = ctk.CTkButton(self.Lframe_pgmain, text="Add Data", command=self.show_Formpage())
+        self.scanButton = ctk.CTkButton(self.Lframe_pgmain, text="Add Data")
         self.scanButton.grid(row=6, column=1, padx=55, pady=(30, 10))
 
         self.mainButton = ctk.CTkButton(self.Lframe_pgmain, text="Scan", fg_color='red')
@@ -137,23 +150,20 @@ class AddFile(ctk.CTk):
                                         font=ctk.CTkFont(family='Davish', size=30, weight='bold'), hover=False)
         self.mainButton.grid(row=10, column=0, padx=125, pady=1, sticky='w')
 
-    def show_Formpage(self):
-        if self.scanButton:
-            self.container_mainpage.grid_forget()
-            self.container_formpage.grid(row=0, column=0, padx=10, pady=35)
-            self.LFrame_Formpage()
-            self.formFrame_Formpage()
-        self.scanButton = False
+    def show_MainPage(self):
+        self.container_formpage.grid_forget()
+        self.container_mainpage.grid(row=0, column=0, padx=10, pady=35, sticky='nsew')
+        self.Lframe_mainpage()
+        self.center_mainpage()
+        self.Rframe_mainpage()
+        self.indicator -= 1
 
-    def show_Mainpage(self):
-        if self.button1:
-            self.container_formpage.grid_forget()
-            self.container_mainpage.grid(row=0, column=0, padx=10, pady=35)
-            self.Lframe_mainpage()
-            self.center_mainpage()
-            self.Rframe_mainpage()
-        self.button1 = False
+    def show_FormPage(self):
+        self.container_mainpage.grid_forget()
+        self.container_formpage.grid(row=0, column=0, sticky="nsew")
+        self.LFrame_Formpage()
+        self.formFrame_Formpage()
 
 
 app = AddFile()
-app.show_Mainpage()
+app.mainloop()

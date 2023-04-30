@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63b6f074-e06f-4081-b1f6-9c660e6d0ee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Recogni Pilajara/MainApp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recogni Pilajara/Test3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/Scanner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/defAddData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/defAddData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/AddFIle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/AddFIle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/MainApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/MainApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recogni Pilajara/Test/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recogni Pilajara/Test/Home.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

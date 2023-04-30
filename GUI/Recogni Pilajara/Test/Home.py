@@ -45,7 +45,7 @@ class Home:
         self.video_frame = ctk.CTkFrame(self.Cframe_PgMain, width=640, height=480)
         self.video_frame.pack()
 
-        self.video_capture = cv2.VideoCapture(0)
+        self.video_capture = cv2.VideoCapture(3)
 
         self.video_place = ctk.CTkLabel(self.video_frame, width=640, height=1, text=None)
         self.video_place.pack()
